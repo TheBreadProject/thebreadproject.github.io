@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Bread Project</title>
+<meta name="description" content="The Bread Project: cybersecurity and IT projects, including Onyx Protocol, a secure chat app.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍞</text></svg>">
+<style>
+  :root {
+    --flour: #fbf4e6;
+    --crumb: #f3e4c4;
+    --golden: #d59a45;
+    --crust: #8a5427;
+    --crust-dark: #4a2b14;
+    --text: #2e1d10;
+    --muted: #6f5a46;
+    --line: #dcc59d;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--flour);
+    color: var(--text);
+    line-height: 1.65;
+  }
+  a { color: var(--crust); }
+  a:hover { color: var(--crust-dark); }
+  a:focus-visible { outline: 3px solid var(--golden); outline-offset: 2px; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+
+  header { background: var(--crust-dark); border-bottom: 6px solid var(--golden); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding-top: 14px; padding-bottom: 14px; }
+  .logo { font-weight: 700; font-size: 1.25rem; color: var(--flour); text-decoration: none; }
+  nav a { color: var(--crumb); margin-left: 18px; text-decoration: none; font-size: 0.95rem; }
+  nav a:hover { color: #fff; text-decoration: underline; }
+
+  .hero { background: var(--crumb); border-bottom: 2px dashed var(--line); padding: 56px 0; }
+  .hero .wrap { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+  .hero-text { flex: 1 1 340px; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; margin: 0 0 16px; color: var(--crust-dark); }
+  .hero p { font-size: 1.1rem; margin: 0 0 26px; max-width: 32em; }
+  .loaf { flex: 0 1 220px; width: 220px; max-width: 100%; }
+  .btn { display: inline-block; padding: 10px 22px; border-radius: 4px; font-weight: 700; text-decoration: none; margin: 0 10px 8px 0; border: 2px solid var(--crust); }
+  .btn-main { background: var(--crust); color: var(--flour); }
+  .btn-main:hover { background: var(--crust-dark); border-color: var(--crust-dark); color: #fff; }
+  .btn-outline { color: var(--crust); }
+  .btn-outline:hover { background: var(--flour); color: var(--crust-dark); }
+
+  section { padding: 52px 0; border-bottom: 2px dashed var(--line); }
+  h2 { font-size: 1.6rem; margin: 0 0 8px; color: var(--crust); }
+  .lead { color: var(--muted); max-width: 40em; margin: 0 0 26px; }
+
+  .project { background: #fffaf0; border: 2px solid var(--line); border-left: 8px solid var(--golden); border-radius: 6px 6px 18px 6px; padding: 22px 24px; margin-bottom: 18px; }
+  .project h3 { margin: 0 0 4px; font-size: 1.3rem; color: var(--crust-dark); }
+  .status { display: inline-block; font-family: "Courier New", monospace; font-size: 0.85rem; background: var(--crumb); color: var(--crust-dark); border: 1px dashed var(--crust); padding: 1px 8px; border-radius: 3px; margin-bottom: 10px; }
+  .project p { margin: 0 0 10px; max-width: 42em; }
+  .project.soon { border-left-color: var(--line); border-style: dashed; color: var(--muted); background: transparent; }
+
+  .meter { margin: 24px 0 8px; height: 24px; background: var(--crumb); border: 2px solid var(--crust); border-radius: 12px; overflow: hidden; }
+  .meter span { display: block; height: 100%; width: 99.99%; background: var(--golden); border-right: 3px solid var(--crust); }
+  .meter-label { font-family: "Courier New", monospace; font-size: 0.9rem; color: var(--muted); }
+
+  footer { background: var(--crust-dark); color: var(--crumb); padding: 30px 0 44px; font-size: 0.9rem; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  footer code { font-family: "Courier New", monospace; color: var(--flour); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">The Bread Project</a>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <h1>Cybersecurity and IT projects, baked from scratch.</h1>
+        <p>The Bread Project is the home of everything I build in security and IT. Right now the oven is running Onyx Protocol, a secure chat app.</p>
+        <a class="btn btn-main" href="#projects">See what's baking</a>
+        <a class="btn btn-outline" href="#about">About the bakery</a>
+      </div>
+      <svg class="loaf" viewBox="0 0 200 130" role="img" aria-label="A loaf of bread">
+        <path d="M18 78 C14 36 58 16 100 16 C142 16 186 36 182 78 C181 100 168 112 150 112 L50 112 C32 112 19 100 18 78Z" fill="#d59a45" stroke="#4a2b14" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M62 38 Q72 56 62 78" fill="none" stroke="#4a2b14" stroke-width="5" stroke-linecap="round"/>
+        <path d="M100 32 Q110 56 100 84" fill="none" stroke="#4a2b14" stroke-width="5" stroke-linecap="round"/>
+        <path d="M138 38 Q148 56 138 78" fill="none" stroke="#4a2b14" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>What's baking</h2>
+      <p class="lead">Current projects and how far along each one is.</p>
+
+      <div class="project">
+        <h3>Onyx Protocol</h3>
+        <span class="status">status: still in the oven (in development)</span>
+        <p>A secure chat app built for private conversations. Design and code are still changing, so details will be posted here as they are finished.</p>
+        <p><a href="#contact">Follow progress</a> &middot; <a href="#">Source code (coming soon)</a></p>
+      </div>
+
+      <div class="project soon">
+        <h3>Next loaf</h3>
+        <span class="status">status: dough not mixed yet</span>
+        <p>Empty slot. New security and IT projects will be listed here.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About the bakery</h2>
+      <p class="lead">The Bread Project is a personal hub for security tools, experiments and write-ups. It is run by one person, so expect rough edges.</p>
+      <p>No loaf is perfect, and nothing here is meant to be. Every project is one step from great, and the last step keeps moving.</p>
+      <div class="meter" role="img" aria-label="99.99999999999 percent baked"><span></span></div>
+      <div class="meter-label">baked: 99.99999999999% (nobody is 100%)</div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div>Contact: <code>you@example.com</code> (replace with your address)</div>
+    <div>&copy; <span id="yr">2026</span> The Bread Project</div>
+  </div>
+</footer>
+
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
